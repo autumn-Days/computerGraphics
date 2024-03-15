@@ -27,21 +27,15 @@ void Draw()
 int main(int argc, char* argv[]) {
     glutInit(&argc, argv);
     
-    // Enable window resizing and double buffering
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
-
-	glutInitWindowSize(500, 500);
+    
+    glutInitWindowSize(500, 500);
     glutInitWindowPosition(100, 150);
     glutCreateWindow(windowName.c_str());
 
-    // Register the display function
     InitColors();
     glutDisplayFunc(Draw);
 
-    // Register the close function
-    //glutCloseFunc(CloseWindow);
-
-    // Enter the GLUT event processing loop
     glutMainLoop();
 
     return 0;
